@@ -1,0 +1,22 @@
+@if(menuItem.children && menuItem.children.length > 0) {
+<li class="nav-item dropdown bg-light bg-gradient">
+    <span class="nav-link dropdown-toggle px-2" (click)="toggleDropdown()">
+        {{ menuItem.title }}
+    </span>
+    <ul
+        class="dropdown-menu bg-light bg-gradient"
+        [ngClass]="{show: isDropdownOpen}"
+    >
+        @for(childItem of menuItem.children; track menuItem.title) {
+        <dnm-menu-item [menuItem]="childItem"></dnm-menu-item>
+        }
+    </ul>
+</li>
+} @if(!menuItem.children || menuItem.children.length === 0) {
+<li class="nav-item">
+    <a class="nav-link px-2" [routerLink]="[menuItem.route]">
+        <i [ngClass]="menuItem.icon"></i>
+        {{ menuItem.title }}
+    </a>
+</li>
+}

@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-2">
+    <a class="navbar-brand" routerLink="/">Dynamic Nested Menu</a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{show: isNavbarOpen}">
+        <ul class="navbar-nav">
+            @for(menuItem of menuItems(); track menuItem.title) {
+            <dnm-menu-item [menuItem]="menuItem"></dnm-menu-item>
+            }
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+[
+    {
+        "title": "Home",
+        "icon": "",
+        "route": "/"
+    },
+    {
+        "title": "About",
+        "icon": "",
+        "route": "/about",
+        "children": [
+            {
+                "title": "About Us",
+                "icon": "",
+                "route": "/about"
+            },
+            {
+                "title": "Events & News",
+                "icon": "bi bi-newspaper",
+                "route": "",
+                "children": [
+                    {
+                        "title": "Events",
+                        "icon": "bi bi-newspaper",
+                        "route": "/events"
+                    },
+                    {
+                        "title": "News",
+                        "icon": "",
+                        "route": "",
+                        "children": [
+                            {
+                                "title": "Media",
+                                "icon": "bi bi-music-note",
+                                "route": "/media"
+                            },
+                            {
+                                "title": "Awards",
+                                "icon": "bi bi-award",
+                                "route": "/awards"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
